@@ -19,23 +19,41 @@
 
 ## 2. Скачать модель CodeLlama
 
+В PowerShell выполни:
 ```powershell
-# CodeLlama 13B
 ollama pull codellama:13b-instruct-q4_K_M
 ```
 
 **Время загрузки:** 5-15 минут в зависимости от скорости интернета.  
 **Размер модели:** ~7.5 GB для 13B версии.
 
+Удалять модель так:
+```powershell
+ollama rm codellama:13b-instruct-q4_K_M
+```
+
 ---
 
 ## 3. Проверка установки и скорости
 
+В PowerShell выполни:
 ```powershell
 ollama run codellama:13b-instruct-q4_K_M --verbose "Напиши на python async оптимизатор SQL запросов: переписывание (predicate pushdown, join reorder), выбор плана на основе статистик, cost-based optimization. Верни только код." 2>&1 | Select-String "token|duration|rate|eval"
 ```
 
-Результат у меня без видеокарты:
+Результат у меня без видеокарты такой:
+```
+total duration:       1m59.9275495s
+load duration:        3.171319s
+prompt eval count:    73 token(s)
+prompt eval duration: 3.6189982s
+prompt eval rate:     20.17 tokens/s
+eval count:           760 token(s)
+eval duration:        1m52.8346494s
+eval rate:            6.74 tokens/s
+```
+
+**Какой результат у тебя? Какая видеокарта? Какой проц, сколько RAM?**
 
 ---
 
