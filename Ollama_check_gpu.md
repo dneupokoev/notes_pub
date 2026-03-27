@@ -67,6 +67,18 @@ eval duration:        1m52.8346494s
 eval rate:            6.74 tokens/s
 ```
 
+Результат с видеокартой 4070super:
+```
+total duration:       20.2032412s
+load duration:        10.6491ms
+prompt eval count:    73 token(s)
+prompt eval duration: 43.6858ms
+prompt eval rate:     1671.02 tokens/s
+eval count:           436 token(s)
+eval duration:        16.0624219s
+eval rate:            27.14 tokens/s
+```
+
 ---
 ---
 
