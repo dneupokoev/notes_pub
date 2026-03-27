@@ -79,6 +79,18 @@ eval duration:        16.0624219s
 eval rate:            27.14 tokens/s
 ```
 
+Результат с видеокартой 5070ti:
+```
+total duration:        11.6355929s
+load duration:         21.662ms
+prompt eval count:     73 token(s)
+prompt eval duration:  28.141ms
+prompt eval rate:      2594.08 tokens/s
+eval count:            993 token(s)
+eval duration:         11.1216699s
+eval rate:             89.29 tokens/s
+```
+
 ---
 ---
 
