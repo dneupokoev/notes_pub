@@ -55,7 +55,7 @@ ollama rm codellama:13b-instruct-q4_K_M
 ollama run codellama:13b-instruct-q4_K_M --verbose "Напиши на python async оптимизатор SQL запросов: переписывание (predicate pushdown, join reorder), выбор плана на основе статистик, cost-based optimization. Верни только код." 2>&1 | Select-String "token|duration|rate|eval"
 ```
 
-Результат без видеокарты:
+Результат без видеокарты CPU AMD Ryzen 7 PRO 8845HS RAM64gb:
 ```
 total duration:       1m59.9275495s
 load duration:        3.171319s
@@ -67,7 +67,7 @@ eval duration:        1m52.8346494s
 eval rate:            6.74 tokens/s
 ```
 
-Результат с видеокартой 4070super:
+Результат с видеокартой 4070super 12gb:
 ```
 total duration:       20.2032412s
 load duration:        10.6491ms
@@ -79,7 +79,7 @@ eval duration:        16.0624219s
 eval rate:            27.14 tokens/s
 ```
 
-Результат с видеокартой 5070ti:
+Результат с видеокартой 5070ti 16gb:
 ```
 total duration:        11.6355929s
 load duration:         21.662ms
