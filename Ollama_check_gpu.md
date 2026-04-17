@@ -46,6 +46,29 @@ ollama pull codellama:13b-instruct-q4_K_M
 ollama rm codellama:13b-instruct-q4_K_M
 ```
 
+Задаем конфигурацию (одинаково для CPU и GPU):
+
+- создай файл ollama-model-codellama13dev (без расширения) заполни его такими данными:
+```powershell
+# Modelfile — llama13dev
+FROM codellama:13b-instruct-q4_K_M
+
+# Параметры для разработки и анализа
+PARAMETER temperature 0.2
+PARAMETER top_p 0.9
+PARAMETER num_ctx 32768
+
+# Ollama сам загрузит максимум слоёв на GPU
+```
+- выполни в каталоге с этим файлом:
+```powershell
+ollama create llama13dev -f ollama-model-codellama13dev
+```
+- теперь можно протестировать:
+```powershell
+ollama run llama13dev "Сколько будет 1+2?"
+```
+
 ---
 
 ## 3. Проверка установки и скорости
